@@ -17,7 +17,7 @@ $('.owl-carousel2').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
-    navText: ["<img src='../icons/left_arrow.png'>","<img src='../icons/right_arrow.png'>"],
+    navText: ["<img src='icons/left_arrow.png'>","<img src='icons/right_arrow.png'>"],
     items:1,
     dots: true,
     responsive:{
@@ -104,9 +104,6 @@ $(function() {
       $('.rotate').toggleClass("down"); 
   });
   
-  $('.header__link a').click (function() {
-    $('#ul').fadeToggle();
-  });
 });
 
 
@@ -117,6 +114,9 @@ function menuFunction() {
     $('.drop-box').fadeIn();
     $('nav#dropMenu').addClass('menu');
     $('.header__link a').addClass('marked');
+    $('.header__link a').click (function() {
+      $('#ul').fadeToggle();
+    });
   }
   else
   {
